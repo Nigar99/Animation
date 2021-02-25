@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box; 
+ }
+ .container {
+     margin-left: 99px;
+ }
+ .up {
+    text-align: center;
+    margin-bottom: 55px;
+}
+html {
+    background-color: thistle;
+}
+h1 {
+    color: gray;
+}
+span {
+    background-color: darkgreen;
+    padding: 9px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 8px;
+}
+    .info{
+    margin-bottom: 43px;
+    font-size: 19px;
+}
+.web, .mobile, .ecommerce, .technical {
+    width: 260px;
+    height: 319px;
+    background-color: white;
+    margin-right: 31px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    float: left;
+    padding-top: 71px;
+    font-size: 25px;
+    text-align: center;
+    transition: 1s ;
+    position: relative;
+}
+p {
+    transition: 311ms;
+}
+.web::before, .mobile::before, .ecommerce::before, .technical::before{
+    position: absolute;
+    content: "";
+    height: 65px;
+    width: 65px;
+    left: 6px;
+    top: 6px;
+    border-top: 1px solid rgb(209, 34, 3);
+    border-left: 1px solid rgb(209, 34, 3);
+    border-top-left-radius:6px;
+}
+.web::after, .mobile::after, .ecommerce::after, .technical::after {
+    position: absolute;
+    content: "";
+    height: 65px;
+    width: 65px;
+    right: 6px;
+    bottom: 6px;
+    border-bottom:1px solid rgb(209, 34, 3);
+    border-right: 1px solid rgb(209, 34, 3);
+    border-bottom-right-radius:6px;
+}
+.web:hover, .mobile:hover, .ecommerce:hover, .technical:hover {
+    transform: scale(1.1);
+    background-color: rgb(96, 160, 84);
+}
+.web:hover p, .mobile:hover p, .ecommerce:hover p , .technical:hover p {
+    transform: translateY(49px);
+}
+i {
+    color: red;
+    font-size: 33px;
+    position: absolute;
+    left: 111px;
+    top: 156px;
+}
+.web:hover i, .mobile:hover i, .ecommerce:hover i, .technical:hover i {
+    animation-name: iconup;
+    animation-duration: 511ms;
+    animation-fill-mode: forwards;
+ }
+ @keyframes iconup {
+     from {
+         top: 166px;
+     }
+     to {
+         top: 79px;
+     }
+ }
+.lorem {
+    position: absolute;
+    top: 186px;
+    font-size: 19px;
+    visibility: hidden;
+    transition: 311ms;
+}
+.web:hover .lorem, .mobile:hover .lorem, .ecommerce:hover .lorem, .technical:hover .lorem {
+    visibility: visible;
+    transform: translateY(-15px);
+}
